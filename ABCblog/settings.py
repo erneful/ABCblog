@@ -57,7 +57,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'manage_post.apps.ManagePostConfig',
     'user.apps.UserConfig',
-    'ckeditor',
     'django_cleanup.apps.CleanupConfig',
 
 
@@ -100,8 +99,10 @@ WSGI_APPLICATION = 'ABCblog.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default=config('DATABASE_URL',)
-   )
+       ## default=config('DATABASE_URL')
+     default='postgresql://postgres:postgres@localhost:5432/mysite',
+    conn_max_age=600
+    )
 }
 
 AUTH_USER_MODEL = 'user.User'
@@ -123,13 +124,13 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-CKEDITOR_CONFIGS = {
-    'default': {
-        'toolbar': 'full',
-        'height': 300,
-        'width': 'auto',
-    },
-}
+##KEDITOR_CONFIGS = {
+    ##default': {
+      ##  'toolbar': 'full',
+       ## 'height': 300,
+      ##  'width': 'auto',
+   ## },
+##}
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
