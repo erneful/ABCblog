@@ -16,7 +16,7 @@ django-cleanup==8.0.0
 django-colorfield==0.10.1
 django-js-asset==2.0.0
 dulwich==0.21.6
-filelock==3.13.1
+filelock==3.12.2
 gunicorn==21.2.0
 idna==3.4
 importlib-metadata==6.8.0
