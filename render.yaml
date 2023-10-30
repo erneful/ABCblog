@@ -1,0 +1,20 @@
+databases:
+  - name: ABCblog
+    databaseName: blog_database
+    user: postgres
+
+services:
+  - type: web
+    name: ABCblog
+    runtime: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn ABCblog.wsgi:application"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: blog_database
+          property: connectionString
+      - key: SECRET_KEY
+        generateValue: true
+      - key: WEB_CONCURRENCY
+        value: 4
