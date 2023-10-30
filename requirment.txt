@@ -38,7 +38,7 @@ psycopg2==2.9.8
 psycopg2-binary==2.9.9
 ptyprocess==0.7.0
 pyproject_hooks==1.0.0
-pyrsistent==0.20.0
+pyrsistent==0.19.3
 python-decouple==3.8
 python-slugify==8.0.1
 pytz==2023.3.post1
