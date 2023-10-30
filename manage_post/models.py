@@ -2,8 +2,9 @@ from pyexpat import model
 
 from django.db import models
 from django.contrib.auth import get_user_model
-##from ckeditor.fields import RichTextField
 User = get_user_model()
+from django.db import models
+from django_ckeditor_5.fields import CKEditor5Field
 
 
 
@@ -33,7 +34,7 @@ class Article(models.Model):
     introduction = models.CharField(max_length=255)
     slug = models.SlugField(unique=True, max_length=255)
     image = models.ImageField(upload_to='Article', blank=True, null=True)
-    body = models.TextField(max_length=255)
+    body = models.CharField('Title', max_length=200)
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)
     categories = models.ManyToManyField(Category)
     create = models.DateTimeField(auto_now_add=True)
