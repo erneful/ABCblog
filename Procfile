@@ -1,0 +1,1 @@
+web: gunicorn ABCblog.wsgi --log-file -
