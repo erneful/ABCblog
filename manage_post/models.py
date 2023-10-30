@@ -5,8 +5,6 @@ from django.contrib.auth import get_user_model
 ##from ckeditor.fields import RichTextField
 User = get_user_model()
 
-from django_ckeditor_5.fields import CKEditor5Field
-
 
 
 # Create your models here.
@@ -35,7 +33,7 @@ class Article(models.Model):
     introduction = models.CharField(max_length=255)
     slug = models.SlugField(unique=True, max_length=255)
     image = models.ImageField(upload_to='Article', blank=True, null=True)
-    body = CKEditor5Field('Text', config_name='extends')
+    body = models.TextField(max_length=255)
     user_id = models.ForeignKey(User, on_delete=models.CASCADE)
     categories = models.ManyToManyField(Category)
     create = models.DateTimeField(auto_now_add=True)

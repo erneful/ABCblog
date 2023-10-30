@@ -2,9 +2,7 @@ asgiref==3.7.2
 dj-database-url==2.1.0
 Django==3.2.9
 django-admin-interface==0.26.1
-django-ckeditor-5==0.2.10
 django-cleanup==8.0.0
-django-colorfield==0.10.1
 django-js-asset==2.1.0
 gunicorn==21.2.0
 packaging==23.2
