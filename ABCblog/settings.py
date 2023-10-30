@@ -100,10 +100,8 @@ WSGI_APPLICATION = 'ABCblog.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-       ## default=config('DATABASE_URL')
-     default='postgresql://postgres:postgres@localhost:5432/mysite',
-    conn_max_age=600
-    )
+        default=config('DATABASE_URL',)
+   )
 }
 
 AUTH_USER_MODEL = 'user.User'
@@ -181,11 +179,11 @@ LOGOUT_REDIRECT_URL = 'login'
 
 # configurar email
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'bandapiace@gmail.com'
-EMAIL_HOST_PASSWORD = 'iyknpjooakusixbp'
+EMAIL_HOST = config('EMAIL_HOST')
+EMAIL_PORT = config('EMAIL_PORT', cast=int)
+EMAIL_USE_TLS = config('EMAIL_USE_TLS', cast=bool)
+EMAIL_HOST_USER = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
