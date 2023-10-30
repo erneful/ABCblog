@@ -14,7 +14,7 @@ django-admin-interface==0.26.1
 django-ckeditor==6.3.2
 django-cleanup==8.0.0
 django-colorfield==0.10.1
-django-js-asset==2.1.0
+django-js-asset==2.0.0
 dulwich==0.21.6
 filelock==3.13.1
 gunicorn==21.2.0
@@ -28,7 +28,7 @@ more-itertools==10.1.0
 msgpack==1.0.7
 packaging==23.2
 pexpect==4.8.0
-Pillow==10.0.1
+Pillow==10.0.0
 pkginfo==1.9.6
 platformdirs==3.11.0
 poetry==1.6.1
