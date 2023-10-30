@@ -57,8 +57,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'manage_post.apps.ManagePostConfig',
     'user.apps.UserConfig',
-    'django_cleanup.apps.CleanupConfig',
     'django_ckeditor_5'
+    'django_cleanup.apps.CleanupConfig',
+
 
 
 ]
