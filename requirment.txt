@@ -25,7 +25,7 @@ jaraco.classes==3.2.3
 jsonschema==4.17.3
 keyring==24.1.1
 more-itertools==9.1.0
-msgpack==1.0.7
+msgpack==1.0.5
 packaging==23.2
 pexpect==4.8.0
 Pillow==10.0.0
