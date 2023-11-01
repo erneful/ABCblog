@@ -11,7 +11,7 @@ distlib==0.3.7
 dj-database-url==2.1.0
 Django==3.2.9
 django-admin-interface==0.26.1
-django-ckeditor==6.3.2
+django-ckeditor==3.6.2.1
 django-cleanup==8.0.0
 django-colorfield==0.10.1
 django-js-asset==2.0.0
@@ -28,12 +28,8 @@ more-itertools==9.1.0
 msgpack==1.0.5
 packaging==23.2
 pexpect==4.8.0
-Pillow==9.5.0
 pkginfo==1.9.6
 platformdirs==3.11.0
-poetry==1.5.1
-poetry-core==1.6.1
-poetry-plugin-export==1.4.0
 psycopg2==2.9.8
 psycopg2-binary==2.9.9
 ptyprocess==0.7.0
