@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
-# exit on error
+# Exit on error.
 set -o errexit
 
-#poetry install
-pip install -r requirment.txt
-web: gunicorn ABCblog.wsgi --log-file -
+pip install -r requirements.txt
 
-python manage.py collectstatic --no-input
-python manage.py migrate
+python app/manage.py check --deploy --fail-level ERROR
+python app/manage.py collectstatic --no-input
+python app/manage.py migrate
