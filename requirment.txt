@@ -16,7 +16,7 @@ django-ckeditor==3.6.2.1
 django-cleanup==8.0.0
 django-colorfield==0.10.1
 django-js-asset==2.0.0
-dnspython==2.4.2
+dnspython==2.3.0
 dulwich==0.21.6
 eventlet==0.33.3
 filelock==3.12.2
