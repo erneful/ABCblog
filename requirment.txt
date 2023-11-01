@@ -3,6 +3,7 @@ attrs==23.1.0
 build==0.10.0
 CacheControl==0.13.1
 certifi==2023.7.22
+cffi==1.16.0
 charset-normalizer==3.3.1
 cleo==2.1.0
 colorama==0.4.6
@@ -15,9 +16,13 @@ django-ckeditor==3.6.2.1
 django-cleanup==8.0.0
 django-colorfield==0.10.1
 django-js-asset==2.0.0
+dnspython==2.4.2
 dulwich==0.21.6
+eventlet==0.33.3
 filelock==3.12.2
-gunicorn==20.1.0
+gevent==23.9.1
+greenlet==3.0.1
+gunicorn @ git+https://github.com/benoitc/gunicorn.git@430dcdd997b955fa1a8569a07d9cdcbac686fb35
 idna==3.4
 importlib-metadata==6.7.0
 installer==0.7.0
@@ -35,6 +40,7 @@ platformdirs==3.11.0
 psycopg2==2.9.8
 psycopg2-binary==2.9.9
 ptyprocess==0.7.0
+pycparser==2.21
 pyproject_hooks==1.0.0
 pyrsistent==0.19.3
 python-dateutil==2.8.2
@@ -58,3 +64,5 @@ urllib3==2.0.7
 virtualenv==20.24.6
 whitenoise==6.5.0
 zipp==3.15.0
+zope.event==5.0
+zope.interface==6.1
