@@ -33,6 +33,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY', default='your secret key')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'RENDER' not in os.environ
 
+CKEDITOR_UPLOAD_PATH = "/home/media/media.lawrence.com/uploads"
+
 
 ALLOWED_HOSTS = []
 
@@ -57,7 +59,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'manage_post.apps.ManagePostConfig',
     'user.apps.UserConfig',
-    'django_ckeditor_5'
+    'django_ckeditor',
     'django_cleanup.apps.CleanupConfig',
 
 
@@ -73,6 +75,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
+
 ]
 
 ROOT_URLCONF = 'ABCblog.urls'
